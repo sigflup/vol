@@ -39,8 +39,8 @@ int main(void) {
 
  init_gui(200,51, 0);
 
- SET_COLOR(globl_fg, 		0   ,0   ,0);
- SET_COLOR(globl_bg, 		224 ,224 ,204);
+ SET_COLOR(globl_fg, 		200  ,200   ,200);
+ SET_COLOR(globl_bg, 		33 ,33 ,33);
  main_grp = new_group(0,0, 200,51, 0,0);
  
  PARM(0,0,200,51,&globl_fg, &globl_bg, LOAD_XPM_FROM_ARRAY, proc_bitmap);
