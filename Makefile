@@ -1,4 +1,5 @@
 
+PREFIX = /home/sigflup/local
 CC = cc
 LEX = lex
 CFLAGS = -I./gui/ `sdl2-config --cflags` -O2 -Wall -ggdb 
@@ -12,12 +13,12 @@ vol: ${OBJS}
 	${CC} -o ${PROGNAME}  ${OBJS} ${LIBS}
 
 install: vol
-	cp vol /usr/local/bin
-	chown root /usr/local/bin/vol
-	chmod +s /usr/local/bin/vol
+	cp vol ${PREFIX}/bin
+	chown root ${PREFIX}/bin/vol
+	chmod +s ${PREFIX}/bin/vol
 
 
-main.o: main.c main.h
+main.o: main.c 
 	${CC} -c ${CFLAGS} main.c
 
 gui/libgui.a:
